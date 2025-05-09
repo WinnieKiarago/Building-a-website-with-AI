@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aromatic Adventures - Premium Spices, Herbs and Beyond</title>
+  <title>Global Region Selector</title>
+  <link rel="stylesheet" href="css-styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="js-main.js" defer></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Region Selector -->
+    <div class="region-selector bg-white shadow-sm p-4 sticky top-0 z-40">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center">
+                <i class="fas fa-globe-americas text-amber-500 text-xl mr-3"></i>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900">Global Settings</h3>
+                    <p class="text-xs text-gray-500">Select your preferred region and currency</p>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <label for="region" class="text-sm font-medium text-gray-700 mr-2">Select Region:</label>
+                <select id="region" class="border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-1 px-2 border text-sm">
+                    <option value="us" data-currency="USD" data-symbol="$">United States (USD)</option>
+                    <option value="ke" data-currency="KES" data-symbol="Ksh">Kenya (KES)</option>
+                    <option value="eu" data-currency="EUR" data-symbol="€">Europe (EUR)</option>
+                    <option value="uk" data-currency="GBP" data-symbol="£">UK (GBP)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="F:\Aromatic Adventures Project\spices pictures\logo.png" alt="Aromatic Adventures Logo" class="w-10 h-10 mr-2">
+                <h1 class="text-2xl font-bold text-gray-800">Aromatic Adventures</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="tab-link font-medium text-gray-700 hover:text-amber-600 transition" data-tab="home">Home</a>
+                <a href="#" class="tab-link font-medium text-gray-700 hover:text-amber-600 transition" data-tab="about">About Us</a>
+                <a href="#" class="tab-link font-medium text-gray-700 hover:text-amber-600 transition" data-tab="products">Products</a>
+                <a href="#" class="tab-link font-medium text-gray-700 hover:text-amber-600 transition" data-tab="contact">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-search text-xl text-gray-700"></i>
+                    <input
+                        type="text"
+                        placeholder="Search products..."
+                        class="hidden md:block border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500"
+                    />
+                </div>
+                <a href="#" class="text-gray-700 hover:text-amber-600 transition">
+                    <i class="fas fa-user text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-amber-600 transition relative">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-amber-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+                <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
+            <a href="#" class="block py-2 tab-link" data-tab="home">Home</a>
+            <a href="#" class="block py-2 tab-link" data-tab="about">About Us</a>
+            <a href="#" class="block py-2 tab-link" data-tab="products">Products</a>
+            <a href="#" class="block py-2 tab-link" data-tab="contact">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Tab -->
+        <div class="tab-content active" id="home">
+            <!-- Hero Section -->
+            <section class="hero flex items-center justify-center text-center text-white">
+                <div class="px-4">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-4">Discover the World of Flavors</h2>
+                    <p class="text-xl md:text-2xl mb-8">Premium quality spices, herbs, nuts sourced from around the globe</p>
+                    <a href="#" class="tab-link bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block" data-tab="products">Shop Now</a>
+                </div>
+            </section>
+            
+            <!-- Featured Categories -->
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Collections</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Spices" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2 text-gray-800">Aromatic Spices</h3>
+                                <p class="text-gray-600 mb-4">From fiery chilies to fragrant cinnamon, explore our premium spice collection.</p>
+                                <a href="#" class="tab-link text-amber-600 font-medium hover:text-amber-700 transition" data-tab="products" data-category="spices">View Collection</a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Herbs" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2 text-gray-800">Exotic Herbs</h3>
+                                <p class="text-gray-600 mb-4">Fresh, dried, and blended herbs to elevate your culinary creations.</p>
+                                <a href="#" class="tab-link text-amber-600 font-medium hover:text-amber-700 transition" data-tab="products" data-category="herbs">View Collection</a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Seasonings" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2 text-gray-800">Gourmet Seasonings</h3>
+                                <p class="text-gray-600 mb-4">Special blends crafted by our master spice mixologists.</p>
+                                <a href="#" class="tab-link text-amber-600 font-medium hover:text-amber-700 transition" data-tab="products" data-category="seasonings">View Collection</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Why Choose Us -->
+            <section class="py-16 bg-amber-50">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Aromatic Adventures?</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto mb-4 shadow-md">
+                                <i class="fas fa-leaf text-3xl text-amber-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Premium Quality</h3>
+                            <p class="text-gray-600">Sourced directly from ethical growers worldwide, ensuring the freshest and most potent flavors.</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto mb-4 shadow-md">
+                                <i class="fas fa-globe-americas text-3xl text-amber-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Global Selection</h3>
+                            <p class="text-gray-600">Over 200 spices, herbs, and seasonings from every corner of the spice route.</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto mb-4 shadow-md">
+                                <i class="fas fa-recycle text-3xl text-amber-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Sustainable Packaging</h3>
+                            <p class="text-gray-600">Eco-friendly options including glass jars and refill pouches to reduce waste.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Testimonials -->
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">What Our Customers Say</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow">
+                            <div class="flex items-center mb-4">
+                                <div class="text-amber-500 mr-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">"The quality of these spices is unmatched! I've never tasted such vibrant flavors in my cooking before."</p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Customer 1" class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Sarah J.</h4>
+                                    <p class="text-sm text-gray-500">Professional Chef</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow">
+                            <div class="flex items-center mb-4">
+                                <div class="text-amber-500 mr-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">"The refill option is brilliant - saves money and reduces waste. The glass jars are beautiful too!"</p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Customer 2" class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Michael T.</h4>
+                                    <p class="text-sm text-gray-500">Home Cook</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow">
+                            <div class="flex items-center mb-4">
+                                <div class="text-amber-500 mr-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">"Their spice blends have transformed my cooking. The Moroccan mix is my absolute favorite!"</p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Customer 3" class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Priya K.</h4>
+                                    <p class="text-sm text-gray-500">Food Blogger</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- About Us Tab -->
+        <div class="tab-content" id="about">
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800">Our Story</h2>
+                            <p class="text-gray-600 mb-4">Founded in 2015, Aromatic Adventures began as a small passion project by two culinary enthusiasts who were disappointed by the lack of high-quality, ethically sourced spices available to home cooks.</p>
+                            <p class="text-gray-600 mb-4">After traveling extensively through spice-producing regions across Asia, the Middle East, and South America, we developed direct relationships with small-scale farmers who share our commitment to sustainable agriculture and fair trade practices.</p>
+                            <p class="text-gray-600 mb-6">Today, we're proud to offer one of the most diverse selections of premium spices, herbs, and seasonings available anywhere, while maintaining our core values of quality, sustainability, and ethical sourcing.</p>
+                            <div class="flex space-x-4">
+                                <div class="text-center bg-amber-50 p-4 rounded-lg">
+                                    <h3 class="text-2xl font-bold text-amber-600">200+</h3>
+                                    <p class="text-gray-600">Spices & Herbs</p>
+                                </div>
+                                <div class="text-center bg-amber-50 p-4 rounded-lg">
+                                    <h3 class="text-2xl font-bold text-amber-600">15</h3>
+                                    <p class="text-gray-600">Countries Sourced</p>
+                                </div>
+                                <div class="text-center bg-amber-50 p-4 rounded-lg">
+                                    <h3 class="text-2xl font-bold text-amber-600">50K+</h3>
+                                    <p class="text-gray-600">Happy Customers</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Our Story" class="rounded-lg shadow-lg w-full">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="py-16 bg-amber-50">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Values</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="text-amber-600 mb-4">
+                                <i class="fas fa-hand-holding-heart text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Ethical Sourcing</h3>
+                            <p class="text-gray-600">We work directly with farmers, ensuring fair prices and sustainable farming practices that protect both people and the environment.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="text-amber-600 mb-4">
+                                <i class="fas fa-seedling text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Quality Assurance</h3>
+                            <p class="text-gray-600">Every batch is rigorously tested for purity, potency, and freshness before it reaches your kitchen.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="text-amber-600 mb-4">
+                                <i class="fas fa-globe-europe text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Sustainability</h3>
+                            <p class="text-gray-600">From biodegradable packaging to carbon-neutral shipping, we're committed to minimizing our environmental impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Meet the Team</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Team Member 1" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-amber-100">
+                            <h3 class="text-xl font-bold mb-1 text-gray-800">Sophia Chen</h3>
+                            <p class="text-amber-600 font-medium mb-2">Founder & CEO</p>
+                            <p class="text-gray-600">Former chef and spice enthusiast who traveled the world to source the finest ingredients.</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-amber-100">
+                            <h3 class="text-xl font-bold mb-1 text-gray-800">Raj Patel</h3>
+                            <p class="text-amber-600 font-medium mb-2">Head of Sourcing</p>
+                            <p class="text-gray-600">With family roots in spice farming, Raj ensures we maintain the highest quality standards.</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-amber-100">
+                            <h3 class="text-xl font-bold mb-1 text-gray-800">Elena Rodriguez</h3>
+                            <p class="text-amber-600 font-medium mb-2">Master Blender</p>
+                            <p class="text-gray-600">Creates our signature blends drawing from her expertise in global cuisines.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Products Tab -->
+        <div class="tab-content" id="products">
+            <section class="py-12 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Our Products</h2>
+                    
+                    <div class="flex flex-wrap mb-8 border-b border-gray-200 justify-center">
+                        <button class="category-tab px-4 py-2 font-medium text-gray-700 hover:text-amber-600 transition border-b-2 border-transparent hover:border-amber-500 active" data-category="all">All Products</button>
+                        <button class="category-tab px-4 py-2 font-medium text-gray-700 hover:text-amber-600 transition border-b-2 border-transparent hover:border-amber-500" data-category="spices">Spices</button>
+                        <button class="category-tab px-4 py-2 font-medium text-gray-700 hover:text-amber-600 transition border-b-2 border-transparent hover:border-amber-500" data-category="herbs">Herbs</button>
+                        <button class="category-tab px-4 py-2 font-medium text-gray-700 hover:text-amber-600 transition border-b-2 border-transparent hover:border-amber-500" data-category="seasonings">Seasonings</button>
+                        <button class="category-tab px-4 py-2 font-medium text-gray-700 hover:text-amber-600 transition border-b-2 border-transparent hover:border-amber-500" data-category="teas">Teas</button>
+                        <button class="category-tab px-4 py-2 font-medium text-gray-700 hover:text-amber-600 transition border-b-2 border-transparent hover:border-amber-500" data-category="nuts">Nuts</button>
+                        <button class="category-tab px-4 py-2 font-medium text-gray-700 hover:text-amber-600 transition border-b-2 border-transparent hover:border-amber-500" data-category="potted">Potted Plants</button>
+                        <button class="category-tab px-4 py-2 font-medium text-gray-700 hover:text-amber-600 transition border-b-2 border-transparent hover:border-amber-500" data-category="customize">Blend Your Own</button>
+
+
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                        <!-- Product 1 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md p-4" data-category="spices" data-base-prices='{"50g": 4.99, "100g": 8.99, "250g": 18.99, "500g": 32.99, "1kg": 59.99}'>
+                            <div class="relative">
+                                <img src="F:\Aromatic Adventures Project\spices pictures\Cinnamon.jpeg" alt="Ceylon Cinnamon" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute top-2 right-2 bg-amber-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</div>
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-bold text-gray-800">Ceylon Cinnamon</h3>
+                                <p class="text-gray-600 text-sm mt-1">Sweet, delicate flavor from Sri Lanka</p>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-amber-500 mr-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </span>
+                                        <span class="text-gray-500 text-sm">(42)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                                    <select class="quantity-select w-full border border-gray-300 rounded-md py-2 px-3 text-sm">
+                                        <option value="50g">50g</option>
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                        <option value="1kg">1kg</option>
+                                    </select>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Packaging</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-1" value="glass" checked>
+                                            <span class="ml-2 text-sm">Glass Jar (+$1.50)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-1" value="refill">
+                                            <span class="ml-2 text-sm">Refill Pack</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Order Quantity</label>
+                                    <div class="flex items-center">
+                                        <button class="quantity-decrease bg-gray-200 hover:bg-gray-300 rounded-l-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-minus text-gray-600"></i>
+                                        </button>
+                                        <input type="text" value="1" readonly class="quantity-input border-t border-b border-gray-300 py-2 px-3 w-12 text-center">
+                                        <button class="quantity-increase bg-gray-200 hover:bg-gray-300 rounded-r-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-plus text-gray-600"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <button class="add-to-cart bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-full transition">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 2 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md p-4" data-category="herbs" data-base-prices='{"50g": 3.99, "100g": 6.99, "250g": 14.99, "500g": 26.99, "1kg": 48.99}'>
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Organic Basil" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-bold text-gray-800">Organic Basil</h3>
+                                <p class="text-gray-600 text-sm mt-1">Sweet, aromatic Italian classic</p>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-amber-500 mr-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span class="text-gray-500 text-sm">(67)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                                    <select class="quantity-select w-full border border-gray-300 rounded-md py-2 px-3 text-sm">
+                                        <option value="50g">50g</option>
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                        <option value="1kg">1kg</option>
+                                    </select>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Packaging</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-2" value="glass" checked>
+                                            <span class="ml-2 text-sm">Glass Jar (+$1.50)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-2" value="refill">
+                                            <span class="ml-2 text-sm">Refill Pack</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Order Quantity</label>
+                                    <div class="flex items-center">
+                                        <button class="quantity-decrease bg-gray-200 hover:bg-gray-300 rounded-l-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-minus text-gray-600"></i>
+                                        </button>
+                                        <input type="text" value="1" readonly class="quantity-input border-t border-b border-gray-300 py-2 px-3 w-12 text-center">
+                                        <button class="quantity-increase bg-gray-200 hover:bg-gray-300 rounded-r-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-plus text-gray-600"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <button class="add-to-cart bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-full transition">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 3 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md p-4" data-category="seasonings" data-base-prices='{"50g": 5.99, "100g": 10.99, "250g": 22.99, "500g": 39.99, "1kg": 72.99}'>
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Moroccan Spice Blend" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute top-2 right-2 bg-amber-600 text-white text-xs font-bold px-2 py-1 rounded-full">BESTSELLER</div>
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-bold text-gray-800">Moroccan Spice Blend</h3>
+                                <p class="text-gray-600 text-sm mt-1">Authentic ras el hanout recipe</p>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-amber-500 mr-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span class="text-gray-500 text-sm">(128)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                                    <select class="quantity-select w-full border border-gray-300 rounded-md py-2 px-3 text-sm">
+                                        <option value="50g">50g</option>
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                        <option value="1kg">1kg</option>
+                                    </select>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Packaging</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-3" value="glass" checked>
+                                            <span class="ml-2 text-sm">Glass Jar (+$1.50)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-3" value="refill">
+                                            <span class="ml-2 text-sm">Refill Pack</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Order Quantity</label>
+                                    <div class="flex items-center">
+                                        <button class="quantity-decrease bg-gray-200 hover:bg-gray-300 rounded-l-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-minus text-gray-600"></i>
+                                        </button>
+                                        <input type="text" value="1" readonly class="quantity-input border-t border-b border-gray-300 py-2 px-3 w-12 text-center">
+                                        <button class="quantity-increase bg-gray-200 hover:bg-gray-300 rounded-r-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-plus text-gray-600"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <button class="add-to-cart bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-full transition">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 4 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md p-4" data-category="teas" data-base-prices='{"50g": 2.99, "100g": 4.99, "250g": 9.99, "500g": 16.99, "1kg": 29.99}'>
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80" alt="Himalayan Pink Salt" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-bold text-gray-800">Himalayan Pink Salt</h3>
+                                <p class="text-gray-600 text-sm mt-1">Mineral-rich salt from Pakistan</p>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-amber-500 mr-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </span>
+                                        <span class="text-gray-500 text-sm">(35)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                                    <select class="quantity-select w-full border border-gray-300 rounded-md py-2 px-3 text-sm">
+                                        <option value="50g">50g</option>
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                        <option value="1kg">1kg</option>
+                                    </select>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Packaging</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-4" value="glass" checked>
+                                            <span class="ml-2 text-sm">Glass Jar (+$1.50)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-4" value="refill">
+                                            <span class="ml-2 text-sm">Refill Pack</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Order Quantity</label>
+                                    <div class="flex items-center">
+                                        <button class="quantity-decrease bg-gray-200 hover:bg-gray-300 rounded-l-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-minus text-gray-600"></i>
+                                        </button>
+                                        <input type="text" value="1" readonly class="quantity-input border-t border-b border-gray-300 py-2 px-3 w-12 text-center">
+                                        <button class="quantity-increase bg-gray-200 hover:bg-gray-300 rounded-r-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-plus text-gray-600"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <button class="add-to-cart bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-full transition">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 5 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md p-4" data-category="herbs" data-base-prices='{"50g": 6.49, "100g": 11.99, "250g": 24.99, "500g": 44.99, "1kg": 84.99}'>
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1558393323-cb183a4f7536?auto=format&fit=crop&w=800&q=80" alt="Thai Herb Set" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">ORGANIC</div>
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-bold text-gray-800">Thai Herb Set</h3>
+                                <p class="text-gray-600 text-sm mt-1">Essential herbs for Thai cuisine</p>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-amber-500 mr-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </span>
+                                        <span class="text-gray-500 text-sm">(73)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                                    <select class="quantity-select w-full border border-gray-300 rounded-md py-2 px-3 text-sm">
+                                        <option value="50g">50g</option>
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                        <option value="1kg">1kg</option>
+                                    </select>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Packaging</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-5" value="glass" checked>
+                                            <span class="ml-2 text-sm">Glass Jar (+$1.50)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-5" value="refill">
+                                            <span class="ml-2 text-sm">Refill Pack</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Order Quantity</label>
+                                    <div class="flex items-center">
+                                        <button class="quantity-decrease bg-gray-200 hover:bg-gray-300 rounded-l-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-minus text-gray-600"></i>
+                                        </button>
+                                        <input type="text" value="1" readonly class="quantity-input border-t border-b border-gray-300 py-2 px-3 w-12 text-center">
+                                        <button class="quantity-increase bg-gray-200 hover:bg-gray-300 rounded-r-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-plus text-gray-600"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <button class="add-to-cart bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-full transition">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 6 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md p-4" data-category="potted" data-base-prices='{"50g": 4.49, "100g": 7.99, "250g": 16.99, "500g": 29.99, "1kg": 54.99}'>
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1596097635121-14b38b1b6b27?auto=format&fit=crop&w=800&q=80" alt="Italian Herb Blend" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-bold text-gray-800">Italian Herb Blend</h3>
+                                <p class="text-gray-600 text-sm mt-1">Classic Mediterranean flavors</p>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-amber-500 mr-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </span>
+                                        <span class="text-gray-500 text-sm">(42)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                                    <select class="quantity-select w-full border border-gray-300 rounded-md py-2 px-3 text-sm">
+                                        <option value="50g">50g</option>
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                        <option value="1kg">1kg</option>
+                                    </select>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Packaging</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-6" value="glass" checked>
+                                            <span class="ml-2 text-sm">Glass Jar (+$1.50)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-6" value="refill">
+                                            <span class="ml-2 text-sm">Refill Pack</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Order Quantity</label>
+                                    <div class="flex items-center">
+                                        <button class="quantity-decrease bg-gray-200 hover:bg-gray-300 rounded-l-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-minus text-gray-600"></i>
+                                        </button>
+                                        <input type="text" value="1" readonly class="quantity-input border-t border-b border-gray-300 py-2 px-3 w-12 text-center">
+                                        <button class="quantity-increase bg-gray-200 hover:bg-gray-300 rounded-r-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-plus text-gray-600"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <button class="add-to-cart bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-full transition">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 7 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md p-4" data-category="seasonings" data-base-prices='{"50g": 3.99, "100g": 6.99, "250g": 14.99, "500g": 26.99, "1kg": 48.99}'>
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=800&q=80" alt="Cajun Seasoning" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-bold text-gray-800">Cajun Seasoning</h3>
+                                <p class="text-gray-600 text-sm mt-1">Authentic Louisiana blend</p>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-amber-500 mr-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </span>
+                                        <span class="text-gray-500 text-sm">(31)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                                    <select class="quantity-select w-full border border-gray-300 rounded-md py-2 px-3 text-sm">
+                                        <option value="50g">50g</option>
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                        <option value="1kg">1kg</option>
+                                    </select>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Packaging</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-7" value="glass" checked>
+                                            <span class="ml-2 text-sm">Glass Jar (+$1.50)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-7" value="refill">
+                                            <span class="ml-2 text-sm">Refill Pack</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Order Quantity</label>
+                                    <div class="flex items-center">
+                                        <button class="quantity-decrease bg-gray-200 hover:bg-gray-300 rounded-l-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-minus text-gray-600"></i>
+                                        </button>
+                                        <input type="text" value="1" readonly class="quantity-input border-t border-b border-gray-300 py-2 px-3 w-12 text-center">
+                                        <button class="quantity-increase bg-gray-200 hover:bg-gray-300 rounded-r-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-plus text-gray-600"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <button class="add-to-cart bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-full transition">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 8 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md p-4" data-category="customize" data-base-prices='{"50g": 4.49, "100g": 7.99, "250g": 16.99, "500g": 29.99, "1kg": 54.99}'>
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1596097635121-14b38b1b6b27?auto=format&fit=crop&w=800&q=80" alt="Italian Herb Blend" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-bold text-gray-800">Italian Herb Blend</h3>
+                                <p class="text-gray-600 text-sm mt-1">Classic Mediterranean flavors</p>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-amber-500 mr-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </span>
+                                        <span class="text-gray-500 text-sm">(42)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                                    <select class="quantity-select w-full border border-gray-300 rounded-md py-2 px-3 text-sm">
+                                        <option value="50g">50g</option>
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                        <option value="1kg">1kg</option>
+                                    </select>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Packaging</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-6" value="glass" checked>
+                                            <span class="ml-2 text-sm">Glass Jar (+$1.50)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-6" value="refill">
+                                            <span class="ml-2 text-sm">Refill Pack</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Order Quantity</label>
+                                    <div class="flex items-center">
+                                        <button class="quantity-decrease bg-gray-200 hover:bg-gray-300 rounded-l-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-minus text-gray-600"></i>
+                                        </button>
+                                        <input type="text" value="1" readonly class="quantity-input border-t border-b border-gray-300 py-2 px-3 w-12 text-center">
+                                        <button class="quantity-increase bg-gray-200 hover:bg-gray-300 rounded-r-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-plus text-gray-600"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <button class="add-to-cart bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-full transition">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 9 -->
+                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md p-4" data-category="nuts" data-base-prices='{"50g": 4.49, "100g": 7.99, "250g": 16.99, "500g": 29.99, "1kg": 54.99}'>
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1596097635121-14b38b1b6b27?auto=format&fit=crop&w=800&q=80" alt="Italian Herb Blend" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-bold text-gray-800">Italian Herb Blend</h3>
+                                <p class="text-gray-600 text-sm mt-1">Classic Mediterranean flavors</p>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-amber-500 mr-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </span>
+                                        <span class="text-gray-500 text-sm">(42)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                                    <select class="quantity-select w-full border border-gray-300 rounded-md py-2 px-3 text-sm">
+                                        <option value="50g">50g</option>
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                        <option value="1kg">1kg</option>
+                                    </select>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Packaging</label>
+                                    <div class="flex space-x-4">
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-6" value="glass" checked>
+                                            <span class="ml-2 text-sm">Glass Jar (+$1.50)</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="radio" class="packaging-option" name="packaging-6" value="refill">
+                                            <span class="ml-2 text-sm">Refill Pack</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Order Quantity</label>
+                                    <div class="flex items-center">
+                                        <button class="quantity-decrease bg-gray-200 hover:bg-gray-300 rounded-l-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-minus text-gray-600"></i>
+                                        </button>
+                                        <input type="text" value="1" readonly class="quantity-input border-t border-b border-gray-300 py-2 px-3 w-12 text-center">
+                                        <button class="quantity-increase bg-gray-200 hover:bg-gray-300 rounded-r-md px-3 py-2 border border-gray-300">
+                                            <i class="fas fa-plus text-gray-600"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <button class="add-to-cart bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-full transition">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 text-center">
+                        <button class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition">
+                            View All Products
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+        <!-- Contact Tab -->
+        <div class="tab-content" id="contact">
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+                    
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                            <h3 class="text-xl font-bold mb-4 text-gray-800">Get in Touch</h3>
+                            <p class="text-gray-600 mb-6">Have questions about our products or need assistance with your order? Our team is here to help!</p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="text-amber-600 mr-4 mt-1">
+                                        <i class="fas fa-map-marker-alt text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">Address</h4>
+                                        <p class="text-gray-600">123 Spice Lane, Flavor Town, FT 12345</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-amber-600 mr-4 mt-1">
+                                        <i class="fas fa-phone-alt text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">Phone</h4>
+                                        <p class="text-gray-600">(123) 456-7890</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-amber-600 mr-4 mt-1">
+                                        <i class="fas fa-envelope text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">Email</h4>
+                                        <p class="text-gray-600">hello@aromaticadventures.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-amber-600 mr-4 mt-1">
+                                        <i class="fas fa-clock text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">Hours</h4>
+                                        <p class="text-gray-600">Monday - Friday: 9am - 5pm</p>
+                                        <p class="text-gray-600">Saturday: 10am - 2pm</p>
+                                        <p class="text-gray-600">Sunday: Closed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-gray-600 hover:text-amber-600 transition">
+                                        <i class="fab fa-facebook-f text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-600 hover:text-amber-600 transition">
+                                        <i class="fab fa-instagram text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-600 hover:text-amber-600 transition">
+                                        <i class="fab fa-twitter text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-600 hover:text-amber-600 transition">
+                                        <i class="fab fa-pinterest-p text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-1/2">
+                            <div class="bg-gray-50 p-8 rounded-lg shadow">
+                                <h3 class="text-xl font-bold mb-6 text-gray-800">Send Us a Message</h3>
+                                <form>
+                                    <div class="mb-4">
+                                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                        <input type="text" id="name" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                        <input type="email" id="email" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                        <input type="text" id="subject" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                    </div>
+                                    
+                                    <div class="mb-6">
+                                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                        <textarea id="message" rows="4" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                                    </div>
+                                    
+                                    <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-md transition">
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="py-16 bg-amber-50">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Visit Our Store</h2>
+                    
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                        <div class="h-96 w-full" id="map">
+                            <!-- Map placeholder - in a real implementation you would use Google Maps or similar -->
+                            <div class="h-full w-full bg-gray-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-map-marked-alt text-5xl text-amber-600 mb-4"></i>
+                                    <p class="text-gray-600">Map would be displayed here</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Aromatic Adventures Retail Store</h3>
+                            <p class="text-gray-600 mb-4">Come visit our flagship store in Flavor Town, where you can smell, taste, and explore our entire range of spices, herbs, and seasonings.</p>
+                            
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                                <div>
+                                    <p class="text-gray-800 font-medium"><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i> 123 Spice Lane, Flavor Town, FT 12345</p>
+                                    <p class="text-gray-800 font-medium mt-2"><i class="fas fa-clock text-amber-600 mr-2"></i> Open Monday-Saturday</p>
+                                </div>
+                                
+                                <a href="#" class="mt-4 sm:mt-0 inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-full transition">
+                                    Get Directions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+     </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <h3 class="text-2xl font-bold">Aromatic Adventures</h3>
+                    </div>
+                    <p class="text-gray-400">Discover the world's finest spices, herbs, and seasonings, sourced ethically and sustainably.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="tab-link text-gray-400 hover:text-amber-400 transition" data-tab="home">Home</a></li>
+                        <li><a href="#" class="tab-link text-gray-400 hover:text-amber-400 transition" data-tab="about">About Us</a></li>
+                        <li><a href="#" class="tab-link text-gray-400 hover:text-amber-400 transition" data-tab="products">Products</a></li>
+                        <li><a href="#" class="tab-link text-gray-400 hover:text-amber-400 transition" data-tab="contact">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition">Returns & Refunds</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for exclusive offers and spice tips!</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="py-2 px-3 rounded-l-md focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-amber-600 hover:bg-amber-700 py-2 px-4 rounded-r-md transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <div class="mt-6">
+                        <h5 class="font-bold mb-2">Follow Us</h5>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-amber-400 transition">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-amber-400 transition">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-amber-400 transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-amber-400 transition">
+                                <i class="fab fa-pinterest-p text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Aromatic Adventures. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
